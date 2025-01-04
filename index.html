@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wise Clone</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <div class="logo">wise</div>
+                <ul>
+                    <li><a href="#" class="active">Personal</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Platform</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">EN</a></li>
+                    <li><a href="#">Log in</a></li>
+                    <li><a href="#" class="register-btn">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div class="hero-content">
+                <div class="ratings">
+                    <div class="app-store">
+                        <span>4.8 ★ on App Store</span>
+                        <span class="reviews">147K reviews</span>
+                    </div>
+                    <div class="google-play">
+                        <span>4.8 ★ on Google Play</span>
+                        <span class="reviews">1.1M reviews</span>
+                    </div>
+                </div>
+                <h1>SEND MONEY GLOBALLY FOR LESS</h1>
+                <p>Move your money where it matters. Save up to 10x on international transfers and spend money worldwide, without any hidden fees.</p>
+                <button class="cta-button">Open an account</button>
+            </div>
+            <div class="calculator">
+                <div class="rate-info">
+                    <span>Rate not guaranteed</span>
+                    <div class="rate">1 USD = 157.295 JPY</div>
+                </div>
+                <div class="conversion-form">
+                    <div class="input-group">
+                        <label>You send exactly</label>
+                        <div class="amount-input">
+                            <input type="text" value="200,000" id="send-amount">
+                            <select id="send-currency">
+                                <option value="USD">USD</option>
+                                <option value="JPY">JPY</option>
+                                <option value="EUR">EUR</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Recipient gets</label>
+                        <div class="amount-input">
+                            <input type="text" value="31,372,264" id="receive-amount">
+                            <select id="receive-currency">
+                                <option value="JPY">JPY</option>
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="payment-method">
+                        <label>Paying with</label>
+                        <button class="wire-transfer">
+                            Wire transfer
+                            <span>Change</span>
+                        </button>
+                    </div>
+                    <div class="fee-breakdown">
+                        <div class="fee-item">
+                            <span>Wire transfer fee</span>
+                            <span>6.11 USD</span>
+                        </div>
+                        <div class="fee-item">
+                            <span>Our fee</span>
+                            <span>45.31 USD</span>
+                        </div>
+                        <div class="fee-total">
+                            <span>Total included fees (0.28%)</span>
+                            <span>51.42 USD</span>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="compare-fees">Compare fees</button>
+                        <button class="send-money" id="sendMoneyBtn">Send money</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="popup" id="successPopup">
+        <div class="popup-content">
+            <div class="success-icon">✓</div>
+            <h2>Transaction Complete!</h2>
+            <p>Your money is on its way</p>
+            <div class="transaction-details">
+                <div class="detail-item">
+                    <span>Amount sent:</span>
+                    <span id="sentAmount">200,000 USD</span>
+                </div>
+                <div class="detail-item">
+                    <span>Recipient gets:</span>
+                    <span id="receivedAmount">31,372,264 JPY</span>
+                </div>
+            </div>
+            <button class="close-popup" id="closePopup">Close</button>
+        </div>
+    </div>
+
+    <script src="js/calculator.js"></script>
+    <script src="js/popup.js"></script>
+</body>
+
+</html>
